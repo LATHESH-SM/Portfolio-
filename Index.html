@@ -1,122 +1,364 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Resume - LATHESH S M</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background: #f9f9f9;
-    color: #333;
-  }
-  .container {
-    max-width: 900px;
-    margin: 30px auto;
-    background: white;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  header {
-    background: #4caf50;
-    color: white;
-    padding: 40px 30px;
-    text-align: center;
-  }
-  header img {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    border: 4px solid white;
-    margin-bottom: 15px;
-    object-fit: cover;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 1.2px;
-  }
-  header p {
-    margin: 6px 0 0;
-    font-weight: 600;
-  }
-  section {
-    padding: 25px 30px;
-  }
-  h2 {
-    border-bottom: 2px solid #4caf50;
-    padding-bottom: 5px;
-    color: #4caf50;
-  }
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  ul li {
-    padding-bottom: 8px;
-  }
-  .download-btn {
-    display: inline-block;
-    margin: 20px 30px;
-    background: #4caf50;
-    color: white;
-    padding: 12px 28px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    box-shadow: 0 4px 8px rgba(76,175,80,0.3);
-    transition: background 0.3s ease;
-  }
-  .download-btn:hover {
-    background: #388e3c;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LATHESH S M – Creative Resume & Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0b1220; /* dark */
+      --fg: #e8f1ff;
+      --muted: #a9b4c7;
+      --card: rgba(255,255,255,0.06);
+      --stroke: rgba(255,255,255,0.12);
+      --brand: #64d3ff;
+      --brand-2:#b56bff;
+      --accent: #00ffa3;
+    }
+    .light{
+      --bg:#f7f9fe; --fg:#111827; --muted:#4b5563; --card:rgba(255,255,255,0.9); --stroke:#e5e7eb; --brand:#2563eb; --brand-2:#7c3aed; --accent:#059669;
+      background: radial-gradient(1200px 800px at 80% -10%, #fef3f8, transparent 60%),
+                  radial-gradient(800px 600px at -10% 110%, #eef7ff, transparent 60%),
+                  #f5f7ff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color:var(--fg); background:
+      radial-gradient(1000px 700px at -10% -10%, rgba(100,211,255,0.12), transparent 60%),
+      radial-gradient(1000px 700px at 110% 110%, rgba(181,107,255,0.12), transparent 60%),
+      var(--bg);
+    }
+    a{color:inherit}
+    .wrap{max-width:1100px;margin:32px auto;padding:20px}/* Floating blobs for creative vibe */
+.blob{position:fixed; pointer-events:none; z-index:-1; filter: blur(40px); opacity:0.45;}
+.b1{top:-80px; left:-80px; width:300px; height:300px; background:radial-gradient(circle at 30% 30%, var(--brand), transparent 60%)}
+.b2{right:-60px; bottom:-60px; width:320px; height:320px; background:radial-gradient(circle at 70% 60%, var(--brand-2), transparent 60%)}
+
+/* Header */
+header{
+  display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:18px;
+}
+.brandmark{display:flex; align-items:center; gap:10px}
+.logo{
+  width:42px; height:42px; border-radius:12px; background:linear-gradient(135deg, var(--brand), var(--brand-2)); box-shadow:0 8px 30px rgba(0,0,0,.35);
+  display:grid; place-items:center; color:#0a0d14; font-weight:800; font-family:Poppins; letter-spacing:0.5px
+}
+.title{font:800 20px Poppins, sans-serif; letter-spacing:0.3px}
+.toolbar{display:flex; gap:10px}
+.btn{
+  appearance:none; border:1px solid var(--stroke); background:linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04)); color:var(--fg);
+  padding:10px 14px; border-radius:12px; font-weight:600; cursor:pointer; backdrop-filter:saturate(120%) blur(8px);
+  transition:.2s transform, .2s background, .2s border-color; user-select:none
+}
+.btn:hover{transform:translateY(-1px); border-color:rgba(255,255,255,0.3)}
+
+/* Layout */
+.grid{
+  display:grid; grid-template-columns: 1.2fr 2fr; gap:18px;
+}
+@media (max-width:980px){.grid{grid-template-columns:1fr;}}
+
+/* Card */
+.card{background:var(--card); border:1px solid var(--stroke); border-radius:20px; padding:18px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.card h2{font:700 16px Poppins; letter-spacing:.4px; margin:0 0 14px}
+.muted{color:var(--muted)}
+
+/* Profile */
+.profile{display:flex; gap:16px}
+.avatar{
+  flex:0 0 auto; width:112px; height:112px; border-radius:18px; background:#0f172a; overflow:hidden; border:1px solid var(--stroke); position:relative
+}
+.avatar img{width:100%; height:100%; object-fit:cover}
+.upload{position:absolute; inset:auto 8px 8px 8px}
+.upload input{display:none}
+.upload label{display:block; text-align:center; font-size:12px; padding:6px 8px; border-radius:10px; background:rgba(0,0,0,.45); border:1px solid var(--stroke); cursor:pointer}
+
+.id h1{font:800 28px Poppins; margin:0}
+.id .role{font-weight:600; color:var(--accent)}
+.taglist{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+.tag{padding:6px 10px; border:1px dashed var(--stroke); border-radius:999px; font-size:12px; color:var(--muted)}
+
+.links{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px; margin-top:12px}
+.badge{display:flex; gap:10px; align-items:center; padding:10px; border-radius:12px; border:1px solid var(--stroke); background:rgba(255,255,255,0.06)}
+
+/* Section list */
+.section{margin-top:16px}
+.list{display:grid; gap:12px}
+.row{display:grid; grid-template-columns: auto 1fr auto; gap:12px; padding:12px; border-radius:14px; border:1px solid var(--stroke)}
+.row .kicker{font:600 12px Inter; color:var(--accent)}
+.row .title{font:700 15px Poppins}
+.row .meta{font-size:12px; color:var(--muted)}
+.row p{margin:6px 0 0; color:var(--muted); line-height:1.5}
+
+/* Skills pills */
+.pills{display:flex; flex-wrap:wrap; gap:8px}
+.pill{padding:8px 12px; border:1px solid var(--stroke); border-radius:999px; font-weight:600; font-size:12px}
+
+/* Portfolio cards */
+.projects{display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:14px}
+@media (max-width:980px){.projects{grid-template-columns:1fr}}
+.project{border:1px solid var(--stroke); border-radius:16px; overflow:hidden; display:grid}
+.project img{width:100%; height:160px; object-fit:cover}
+.project .px{padding:12px}
+
+/* Footer ribbon */
+footer{margin-top:22px; text-align:center; color:var(--muted); font-size:12px}
+
+/* Printable A4 for resume export */
+#resumeA4{background:white; color:#0d1321; font-family:Inter, sans-serif; width:210mm; min-height:297mm; margin:0 auto; padding:16mm; border-radius:12px}
+#resumeA4 *{color:inherit}
+.a4-grid{display:grid; grid-template-columns: 1fr 1.3fr; gap:10mm}
+.a4-card{border:1px solid #e5e7eb; border-radius:12px; padding:8mm}
+.a4-header{display:flex; gap:10mm; align-items:center; margin-bottom:6mm}
+.a4-avatar{width:30mm; height:30mm; border-radius:8mm; overflow:hidden; border:1px solid #e5e7eb}
+.a4-avatar img{width:100%; height:100%; object-fit:cover}
+.a4-name{font:800 20pt Poppins; margin:0}
+.a4-role{font:600 11pt Poppins; color:#0ea5e9}
+.a4-row{margin:3mm 0}
+.a4-k{font:700 10pt Poppins; letter-spacing:.4px; color:#334155; margin-bottom:2mm}
+.a4-li{margin:0; padding-left:4mm}
+.a4-li li{margin:1.2mm 0}
+
+@media print{ body{background:white} .wrap{max-width:none; padding:0} header, .blob, .projects {display:none} }
+
+  </style>
 </head>
 <body>
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <div class="wrap">
+    <header>
+      <div class="brandmark">
+        <div class="logo">LS</div>
+        <div class="title">LATHESH S M — Portfolio & Resume</div>
+      </div>
+      <div class="toolbar">
+        <button id="btnTheme" class="btn" title="Toggle light/dark">Toggle Theme</button>
+        <button id="btnPrint" class="btn" title="Print">Print</button>
+        <button id="btnPDF" class="btn" title="Download PDF">Download Resume PDF</button>
+      </div>
+    </header><div class="grid">
+  <aside class="card">
+    <div class="profile">
+      <div class="avatar" id="avatarBox">
+        <img id="avatar" alt="Your photo" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop"/>
+        <div class="upload">
+          <input type="file" id="imgUpload" accept="image/*" />
+          <label for="imgUpload">Upload photo</label>
+        </div>
+      </div>
+      <div class="id">
+        <h1>LATHESH S M</h1>
+        <div class="role">Full‑Stack Developer • Problem Solver</div>
+        <div class="taglist">
+          <span class="tag">JavaScript • React</span>
+          <span class="tag">Node.js • APIs</span>
+          <span class="tag">DB: MongoDB / SQL</span>
+        </div>
+      </div>
+    </div>
+    <div class="links">
+      <div class="badge">📧 latheshsm@email.com</div>
+      <div class="badge">📱 +91‑9XXXXXXXXX</div>
+      <div class="badge">🔗 github.com/latheshsm</div>
+      <div class="badge">🌐 portfolio.example.com</div>
+    </div>
 
-<div class="container">
-  <header>
-    <img src="image-2.png" alt="Lathesh S M">
-    <h1>LATHESH S M</h1>
-    <p>Creative Portfolio & Resume</p>
-  </header>
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="pills">
+        <span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">JavaScript</span><span class="pill">React</span><span class="pill">Redux</span><span class="pill">Node.js</span><span class="pill">Express</span><span class="pill">MongoDB</span><span class="pill">SQL</span><span class="pill">Git</span><span class="pill">REST</span>
+      </div>
+    </div>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Enter a short bio or professional summary here emphasizing skills and interests.</p>
-  </section>
+    <div class="section">
+      <h2>Education</h2>
+      <div class="list">
+        <div class="row">
+          <div class="kicker">B.E / B.Tech</div>
+          <div>
+            <div class="title">Computer Science & Engineering</div>
+            <div class="meta">Your College • 2021–2025</div>
+            <p>CGPA: 8.5/10 • Coursework: DSA, DBMS, OS, CN</p>
+          </div>
+          <div class="meta">India</div>
+        </div>
+      </div>
+    </div>
 
-  <section>
-    <h2>Experience</h2>
-    <ul>
-      <li><strong>Job Title 1</strong> - Company Name (Year-Year)</li>
-      <li><strong>Job Title 2</strong> - Company Name (Year-Year)</li>
-    </ul>
-  </section>
+    <div class="section">
+      <h2>Achievements</h2>
+      <ul class="a4-li">
+        <li>Smart Dustbin IoT project selected for campus expo.</li>
+        <li>Top 5 in college hackathon (2024).</li>
+        <li>LeetCode 200+ problems, 50+ days streak.</li>
+      </ul>
+    </div>
+  </aside>
 
-  <section>
-    <h2>Education</h2>
-    <ul>
-      <li>Degree, University - Year</li>
-    </ul>
-  </section>
+  <main class="card">
+    <h2>About</h2>
+    <p class="muted">I build delightful, accessible web apps with a focus on performance and clean architecture. I enjoy solving problems, designing intuitive UIs, and shipping features end‑to‑end.</p>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Skill 1</li>
-      <li>Skill 2</li>
-      <li>Skill 3</li>
-    </ul>
-  </section>
+    <div class="section">
+      <h2>Experience</h2>
+      <div class="list">
+        <div class="row">
+          <div class="kicker">Intern</div>
+          <div>
+            <div class="title">Frontend Developer — XYZ Labs</div>
+            <div class="meta">Jun 2024 – Sep 2024 • Remote</div>
+            <p>Built responsive components in React, optimized bundle size by 25%, and implemented accessibility improvements (WCAG AA).</p>
+          </div>
+          <div class="meta">React • Vite</div>
+        </div>
+        <div class="row">
+          <div class="kicker">Project</div>
+          <div>
+            <div class="title">Smart Dustbin (IoT)</div>
+            <div class="meta">ESP32 • Ultrasonic • Cloud</div>
+            <p>Real‑time fill‑level monitoring, route optimization dashboard, and alerts; reduced pickups by 30% in simulation.</p>
+          </div>
+          <div class="meta">IoT • Node • Charts</div>
+        </div>
+      </div>
+    </div>
 
-  <section style="text-align:center;">
-    <!-- Place your resume PDF in the same folder and update the file name -->
-    <a href="LATHESH_S_M_Resume.pdf" download class="download-btn">Download Resume PDF</a>
-  </section>
+    <div class="section">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop" alt="project cover"/>
+          <div class="px">
+            <div class="title">Weatherly — PWA Weather App</div>
+            <p class="muted">Fast, offline‑ready PWA with geolocation, hourly forecasts, and theming.</p>
+          </div>
+        </article>
+        <article class="project">
+          <img src="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?q=80&w=1200&auto=format&fit=crop" alt="project cover"/>
+          <div class="px">
+            <div class="title">TaskFlow — Kanban Productivity</div>
+            <p class="muted">Drag‑and‑drop boards, Pomodoro timer, and analytics. Multi‑device sync.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Open to internships and full‑time roles. Drop a line and let's build something great!</p>
+    </div>
+  </main>
 </div>
 
-</body>
-</html>
+<!-- Hidden A4 layout for crisp PDF export (auto‑synced with profile image + details) -->
+<section id="resumeA4" class="card" style="margin-top:18px">
+  <div class="a4-header">
+    <div class="a4-avatar"><img id="a4Avatar" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?q=80&w=400&auto=format&fit=crop" alt="avatar"/></div>
+    <div>
+      <h1 class="a4-name">LATHESH S M</h1>
+      <div class="a4-role">Full‑Stack Developer</div>
+      <div style="margin-top:2mm; color:#475569">📧 latheshsm@email.com • 📱 +91‑9XXXXXXXXX • 🔗 github.com/latheshsm</div>
+    </div>
+  </div>
+  <div class="a4-grid">
+    <div>
+      <div class="a4-card">
+        <div class="a4-k">PROFILE</div>
+        <div>Developer focused on building performant web apps with clean, maintainable code and pixel‑perfect UI.</div>
+      </div>
+      <div class="a4-card">
+        <div class="a4-k">SKILLS</div>
+        <div>JavaScript, React, Redux, Node.js, Express, MongoDB, SQL, REST APIs, Git, HTML, CSS</div>
+      </div>
+      <div class="a4-card">
+        <div class="a4-k">EDUCATION</div>
+        <div class="a4-row"><strong>Computer Science & Engineering</strong><br/>Your College • 2021–2025 • CGPA 8.5/10</div>
+      </div>
+      <div class="a4-card">
+        <div class="a4-k">ACHIEVEMENTS</div>
+        <ul class="a4-li">
+          <li>Smart Dustbin IoT project selected for campus expo</li>
+          <li>Top 5 in college hackathon (2024)</li>
+          <li>LeetCode 200+ problems solved</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="a4-card">
+        <div class="a4-k">EXPERIENCE</div>
+        <div class="a4-row">
+          <strong>Frontend Developer Intern — XYZ Labs</strong>
+          <div>Jun 2024 – Sep 2024 • Remote</div>
+          <ul class="a4-li">
+            <li>Built reusable React components and patterns</li>
+            <li>Optimized bundle by 25% and improved Lighthouse scores</li>
+            <li>Improved accessibility to WCAG 2.1 AA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="a4-card">
+        <div class="a4-k">PROJECTS</div>
+        <div class="a4-row">
+          <strong>Smart Dustbin (IoT)</strong>
+          <div>ESP32 • Ultrasonic • Cloud Dashboard</div>
+          <ul class="a4-li">
+            <li>Real‑time fill‑level monitoring and alerts</li>
+            <li>Optimized pickup routes (−30% simulated trips)</li>
+          </ul>
+        </div>
+        <div class="a4-row">
+          <strong>Weatherly — PWA Weather App</strong>
+          <div>React • Service Worker • Charts</div>
+          <ul class="a4-li">
+            <li>Offline support and responsive UI</li>
+            <li>Hourly forecasts and theming</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© <span id="year"></span> Lathesh S M • Built with ♥ for recruiters & collaborators.</footer>
+
+  </div>  <!-- html2pdf bundle (html2canvas + jsPDF) -->  <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>  <script>
+    // Theme toggle
+    const btnTheme = document.getElementById('btnTheme');
+    btnTheme.addEventListener('click', ()=> document.body.classList.toggle('light'));
+
+    // Print
+    document.getElementById('btnPrint').addEventListener('click', ()=> window.print());
+
+    // Sync year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Image upload & sync to A4 avatar
+    const upload = document.getElementById('imgUpload');
+    const avatar = document.getElementById('avatar');
+    const a4Avatar = document.getElementById('a4Avatar');
+    upload.addEventListener('change', (e)=>{
+      const file = e.target.files?.[0];
+      if(!file) return;
+      const reader = new FileReader();
+      reader.onload = ev => { avatar.src = ev.target.result; a4Avatar.src = ev.target.result; };
+      reader.readAsDataURL(file);
+    });
+
+    // Download as PDF from A4 section (crisp output)
+    document.getElementById('btnPDF').addEventListener('click', ()=>{
+      const el = document.getElementById('resumeA4');
+      const opt = {
+        margin:       [5, 5, 5, 5],
+        filename:     'Lathesh_SM_Resume.pdf',
+        image:        { type: 'jpeg', quality: 0.98 },
+        html2canvas:  { scale: 2, useCORS: true },
+        jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      };
+      html2pdf().from(el).set(opt).save();
+    });
+  </script></body>
+                                                                                                                                   </html>
